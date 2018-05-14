@@ -4,11 +4,11 @@ A basic pub/sub application to test the Azure IoT services.
 #### IoT Hub creation:
 
   1. In the Azure Portal, click "Create a resource" --> "Internet of Things" --> "IoT Hub";
-  2. In the IoT Hub panel, fill in the fields:
-      2.1. Enter a hub name;
-      2.2. Enter a new resource group name;
-      2.3. Choose the closest location to you;
-      2.4. For pricing and scale tier, choose the "F1 - Free" tier
+  2. In the IoT Hub panel, fill in the fields:    
+      2.1. Enter a hub name;    
+      2.2. Enter a new resource group name;    
+      2.3. Choose the closest location to you;    
+      2.4. For pricing and scale tier, choose the "F1 - Free" tier    
   3. Click "Create";
   4. When the IoT Hub is ready, open the IoT Hub panel;
   5. Click on the "Overview" and get the "Hostname" information;
@@ -17,11 +17,11 @@ A basic pub/sub application to test the Azure IoT services.
 
 #### IoT device creation:
 
-  1. In the IoT hub panel, find the "EXPLORERS" menu and click "IoT devices";
-  2. Click on the "+Add" button and fill in the fields:
-      2.1. Type the "Device ID";
-      2.2. Select "X.509 Self-Signed" in the "Authentication Type";
-      2.3. Enter the "Primary Key" and "Secondary Key" thumbprints (in this case, I repeated the "Primary Key" thumbprint for the "Secondary Key");
-      2.4. In order to get the key thumbprint, you can perform:
-          2.4.1. 
+  1. In the IoT hub panel, find the "EXPLORERS" menu and click "IoT devices";    
+  2. Click on the "+Add" button and fill in the fields:    
+      2.1. Type the "Device ID";    
+      2.2. Select "X.509 Self-Signed" in the "Authentication Type";    
+      2.3. Enter the "Primary Key" and "Secondary Key" thumbprints (in this case, I repeated the "Primary Key" thumbprint for the "Secondary Key");    
+      2.4. In order to get the key thumbprint, you can perform:    
+          2.4.1.     
 
