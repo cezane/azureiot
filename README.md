@@ -23,5 +23,17 @@ A basic pub/sub application to test the Azure IoT services.
       2.2. Select "X.509 Self-Signed" in the "Authentication Type";    
       2.3. Enter the "Primary Key" and "Secondary Key" thumbprints (in this case, I repeated the "Primary Key" thumbprint for the "Secondary Key");    
       2.4. In order to get the key thumbprint, you can perform:    
-          2.4.1.     
+            2.4.1. Convert the .pem format file to a .der format file:
+
+    openssl x509 -in rsa_cert.pem -out rsa_cert.der -outform der
+
+            2.4.2. Get the SHA1 thumbprint for the cert file (the portal, for now, only supports SHA1 thumbprints - I already alerted the Azure team about this):
+
+    openssl sha -sha1 rsa_cert.der
+
+      2.5. Select "Enable" in the "Connect device to IoT Hub";
+  3. Click "Save".
+
+#### 
+
 
