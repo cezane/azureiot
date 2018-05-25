@@ -3,11 +3,12 @@ import ssl, random
 from time import sleep
 
 iothub_name = "SMHub"
+device_id = "SM1"
 mqtt_url = "{}.azure-devices.net".format(iothub_name)
 root_ca = "./certs/digicertbaltimoreroot.pem"
 public_crt = "./certs/rsa_cert.pem"
 private_key = "./certs/rsa_private.pem"
-publish_point = "devices/SM1/messages/events/"
+publish_point = "devices/{}/messages/events/".format(device_id)
 
 connflag = False
 
@@ -37,6 +38,8 @@ if __name__ == "__main__":
                    cert_reqs = ssl.CERT_REQUIRED, 
                    tls_version = ssl.PROTOCOL_TLSv1_2, 
                    ciphers = None)
+
+    client.username_pw_set(username="{}.azure-devices.net/{}".format(iothub_name, device_id), password="")
 
     client.on_connect = on_connect
 #    client.on_publish = on_publish
